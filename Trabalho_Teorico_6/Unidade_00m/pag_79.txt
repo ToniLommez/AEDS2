@@ -1,0 +1,86 @@
+=======================================
+-------------- PAGINA 79 --------------
+
+Faca o quadro de memoria:
+----------------------------
+Cliente registro;
+Cliente* ponteiro = (Cliente*) malloc (sizeof(Cliente));
+registro.codigo = 1;
+strcpy(registro.nome, “AA”);
+printf(“\nFuncionario (%i): %s”, registro.codigo, registro.nome);
+ponteiro->codigo = 2;
+strcpy(ponteiro->nome, “BB”);
+printf(“\nFuncionario (%i): %s”, ponteiro->codigo, ponteiro->nome);
+----------------------------
+
+Cliente registro;
+|----------------------------------|
+| endereco |    nome    | conteudo |
+|----------|------------|----------|
+|----------|------------|----------|
+|   ????   |  r.codigo  |   lixo   | // estou abreviando registro para r.
+|----------|------------|----------| // para o quadro nao ficar muito largo
+|   ????   |  r.nome    |   lixo   |
+|----------------------------------|
+
+Cliente* ponteiro = (Cliente*) malloc (sizeof(Cliente));
+|----------------------------------|
+| endereco |    nome    | conteudo |
+|----------|------------|----------|
+|   ????   |  r.codigo  |   lixo   |
+|----------|------------|----------|
+|   ????   |  r.nome    |   lixo   | // ponteiro abreviado para p
+|----------|------------|----------|
+|   ????   |  ponteiro  |    99a   |
+|----------|------------|----------|
+|   ????   |  p.codigo  |   lixo   |
+|----------|------------|----------|
+|   ????   |  p.nome    |   lixo   |
+|----------------------------------|
+
+registro.codigo = 1;
+strcpy(registro.nome, “AA”);
+|----------------------------------|
+| endereco |    nome    | conteudo |
+|----------|------------|----------|
+|   ????   |  r.codigo  |      1   |
+|----------|------------|----------|
+|   ????   |  r.nome    |     AA   |
+|----------|------------|----------|
+|   ????   |  ponteiro  |    99a   |
+|----------|------------|----------|
+|    99a   |  p.codigo  |   lixo   |
+|----------|------------|----------|
+|    99b   |  p.nome    |   lixo   |
+|----------------------------------|
+
+printf(“\nFuncionario (%i): %s”, registro.codigo, registro.nome);
+|----------------------------------|
+|               Tela               |
+|----------------------------------|
+|        Funcionario (1): AA       |
+|----------------------------------|
+
+ponteiro->codigo = 2;
+strcpy(ponteiro->nome, “BB”);
+|----------------------------------|
+| endereco |    nome    | conteudo |
+|----------|------------|----------|
+|   ????   |  r.codigo  |      1   |
+|----------|------------|----------|
+|   ????   |  r.nome    |     AA   |
+|----------|------------|----------|
+|   ????   |  ponteiro  |    99a   |
+|----------|------------|----------|
+|    99a   |  p.codigo  |      2   |
+|----------|------------|----------|
+|    99b   |  p.nome    |     BB   |
+|----------------------------------|
+
+printf(“\nFuncionario (%i): %s”, ponteiro->codigo, ponteiro->nome);
+|----------------------------------|
+|               Tela               |
+|----------------------------------|
+|        Funcionario (1): AA       |
+|        Funcionario (2): BB       |
+|----------------------------------|

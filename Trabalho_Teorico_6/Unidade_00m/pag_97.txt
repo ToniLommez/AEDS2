@@ -1,0 +1,161 @@
+===============================================================
+-------------------------- PAGINA 97 --------------------------
+
+============================ JAVA =============================
+
+• Represente graficamente o código Java abaixo
+---------------------------- 
+• Elemento e1;
+
+ e1
+ --> ?
+
+• Elemento e1 = new Elemento();
+
+ e1 |-----|
+ -->|     |
+    |-----|
+
+• Elemento[] e2 = new Elemento [3];
+
+ e1 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+       ?     ?     ?
+
+• Elemento[] e2 = new Elemento [3];
+• for (int i = 0; i < 3; i ++){
+•     e2[i] = new Elemento();
+• }
+
+ e1 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+     |---| |---| |---|
+     |   | |   | |   |
+     |---| |---| |---|
+
+
+============================   C   ============================
+
+• Represente graficamente o código C abaixo
+---------------------------- 
+• Elemento e1;
+
+ e1 |-----|
+    |     |
+    |-----|
+
+• Elemento* e2;
+
+ e2  
+ --> ?
+
+• Elemento* e2 = (Elemento*) malloc(sizeof(Elemento));
+
+ e2 |-----|
+ -->|     |
+    |-----|
+
+• Elemento* e2 = (Elemento*) malloc(3*sizeof(Elemento));
+
+ e2 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+
+• Elemento e3[3];
+
+    |-----|-----|-----|
+ e3 |     |     |     |
+    |-----|-----|-----|
+
+• Elemento** e4;
+
+    e4 
+    --> ?
+
+• Elemento** e4 = (Elemento**) malloc(3*sizeof(Elemento*));
+
+ e4 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+       ?     ?     ?
+
+• Elemento** e4 = (Elemento**) malloc(3*sizeof(Elemento*));
+• e4[0] = (Elemento*) malloc(sizeof(Elemento*));
+• e4[2] = (Elemento*) malloc(sizeof(Elemento*));
+
+ e4 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+     |---|       |---|
+     |   |   ?   |   |
+     |---|       |---|
+
+============================  C++   ============================
+
+• Represente graficamente o código C++ abaixo
+---------------------------- 
+• Elemento e1;
+
+ e1 |-----|
+    |     |
+    |-----|
+
+• Elemento* e2;
+
+ e2  
+ --> ?
+
+• Elemento* e2 = new Elemento;
+
+ e2 |-----|
+ -->|     |
+    |-----|
+
+• Elemento* e2 = new Elemento[3];
+
+ e2 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+
+• Elemento e3[3];
+
+    |-----|-----|-----|
+ e3 |     |     |     |
+    |-----|-----|-----|
+
+• Elemento** e4;
+
+ e4 
+ --> ?
+
+• Elemento** e4 = new Elemento*[3];
+
+ e4 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+       ?     ?     ?
+
+• Elemento** e4 = new Elemento*[3];
+• e4[0] = new Elemento;
+• e4[2] = new Elemento;
+
+ e4 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+     |---|       |---|
+     |   |   ?   |   |
+     |---|       |---|

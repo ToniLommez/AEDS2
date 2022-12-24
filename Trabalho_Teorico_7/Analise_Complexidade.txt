@@ -1,0 +1,53 @@
+/* 
+ * Algoritmo e Estrutura de Dados 2
+ * Trabalho Teorico 7
+ * 
+ * Marcos Antonio Lommez Candido Ribeiro
+ * 771157
+ * 31/10/2022 
+*/
+
+Todos os metodos possui como melhor caso 1 pois podem parar caso 
+o ponto de insercao seja o primeiro a ser testado
+
+Embora o pior caso de todos possua uma tendencia de crescimento O(n)
+a pesquisa por Nome e' muito mais rapida e eficiente que a por CPF
+pois pode utilizar a arvore como indice primario de busca e assim
+diminuir drasticamente o tempo, por outro lado a pesquisa por CPF
+precisa passar em todos os elementos do array
+
+E' importante dizer que mesmo com a otimizacao que a arvore tras
+a tendencia de crescimento ainda continua como O(n) caso todos os
+elementos inseridos possuam a mesma inicial no nome.
+
+Por fim o peso da lista encadeada prevalesce sobre a arvore binaria.
+
+--------------------------
+
+Inserir
+
+melhor: Ω(1)
+pior:   O(n)
+
+--------------------------
+
+Remover
+
+melhor: Ω(1)
+pior:   O(n)
+
+--------------------------
+
+Pesquisar Nome
+
+melhor: Ω(1)
+pior:   O(n)
+
+--------------------------
+
+Pesquisar CPF
+
+melhor: Ω(1)
+pior:   O(n)
+
+--------------------------

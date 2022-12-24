@@ -1,0 +1,57 @@
+• Represente graficamente o código C++ abaixo
+---------------------------- 
+• Elemento e1;
+
+ e1 |-----|
+    |     |
+    |-----|
+
+• Elemento* e2;
+
+  e2  
+  --> ?
+
+• Elemento* e2 = new Elemento;
+
+ e2 |-----|
+ -->|     |
+    |-----|
+
+• Elemento* e2 = new Elemento[3];
+
+ e2 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+
+• Elemento e3[3];
+
+    |-----|-----|-----|
+ e3 |     |     |     |
+    |-----|-----|-----|
+
+• Elemento** e4;
+
+ e4 
+ --> ?
+
+• Elemento** e4 = new Elemento*[3];
+
+ e4 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+       ?     ?     ?
+
+• Elemento** e4 = new Elemento*[3];
+• e4[0] = new Elemento;
+• e4[2] = new Elemento;
+
+ e4 |-----|-----|-----|
+ -->|     |     |     |
+    |-----|-----|-----|
+       |     |     |
+       V     V     V
+     |---|       |---|
+     |   |   ?   |   |
+     |---|       |---|
