@@ -1,0 +1,133 @@
+/**
+ * Marcos Antonio Lommez Candido Ribeiro
+ * 77157
+ * AED's 2
+ * 15/08/2022
+ */
+
+class isEmJava {
+    /**
+     * Metodo para testar se string esta escrito 'FIM'
+     * 
+     * @param s String a ser testada
+     * @return True se for 'FIM'
+     */
+    public static boolean isFim(String s) {
+        return (s.length() == 3 && s.charAt(0) == 'F' && s.charAt(1) == 'I' && s.charAt(2) == 'M');
+    }
+
+    /**
+     * Transforma um caractere em maiusculo
+     * 
+     * @param c Caractere a ser transformado
+     * @return Se este for minusculo, retornara em maiusculo
+     */
+    public static char toMaiusculo(char c) {
+        return ((c >= 'a' && c <= 'z') ? (char) (c - 32) : c);
+    }
+
+    /**
+     * Testa se uma String possui apenas vogais
+     * Primeiro transforma em maiusculo para diminuir a quantidade de testes
+     * 
+     * @param s String a ser testada
+     * @return True se todos os caracteres forem apenas vogais
+     */
+    public static boolean eVogal(String s) {
+        boolean eVogal = true;
+        for (int i = 0; i < s.length(); i++) {
+            char c = toMaiusculo(s.charAt(i));
+            if (!(c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')) {
+                eVogal = false;
+                i = s.length();
+            }
+        }
+        return eVogal;
+    }
+
+    /**
+     * Testa se uma String possui apenas consoantes
+     * Primeiro transforma em maiusculo para diminuir a quantidade de testes
+     * 
+     * @param s String a ser testada
+     * @return True se todos os caracteres forem apenas consoantes
+     */
+    public static boolean eConsoante(String s) {
+        boolean eConsoante = true;
+        for (int i = 0; i < s.length(); i++) {
+            char c = toMaiusculo(s.charAt(i));
+            if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c <= 'A' || c >= 'Z') {
+                eConsoante = false;
+                i = s.length();
+            }
+        }
+        return eConsoante;
+    }
+
+    /**
+     * Testa se uma String e' um numero inteiro
+     * 
+     * @param s String a ser testada
+     * @return True se for um numero inteiro
+     */
+    public static boolean eInteiro(String s) {
+        boolean eInteiro = true;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c < '0' || c > '9') {
+                eInteiro = false;
+                i = s.length();
+            }
+        }
+        return eInteiro;
+    }
+
+    /**
+     * Testa se uma String e' um numero real
+     * pode ou nao possuir '.' ou ',' mas nao mais do que 1
+     * 
+     * @param s String a ser testada
+     * @return True se for um numero real
+     */
+    public static boolean eReal(String s) {
+        boolean eReal = true;
+        int pontos = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c < '0' || c > '9' || c == '.' || c == ',') {
+                if ((c == '.' || c == ',') && pontos < 1) {
+                    pontos++;
+                    continue;
+                }
+                eReal = false;
+                i = s.length();
+            }
+        }
+        return eReal;
+    }
+
+    // Driver
+    public static void main(String[] args) {
+        String[] entrada = new String[1000];
+        int numEntrada = 0;
+
+        // Leitura da entrada padrao
+        do {
+            entrada[numEntrada] = MyIO.readLine();
+        } while (isFim(entrada[numEntrada++]) == false);
+        numEntrada--; // Desconsiderar ultima linha contendo a palavra FIM
+
+        // Para cada linha de entrada, gerando uma de saida contendo o a palavra cifrada
+        // em chave 3
+        for (int i = 0; i < numEntrada; i++) {
+            MyIO.print(eVogal(entrada[i])?"SIM":"NAO");
+            MyIO.print(" ");
+            MyIO.print(eConsoante(entrada[i])?"SIM":"NAO");
+            MyIO.print(" ");
+            MyIO.print(eInteiro(entrada[i])?"SIM":"NAO");
+            MyIO.print(" ");
+            MyIO.print(eReal(entrada[i])?"SIM":"NAO");
+            MyIO.print("\n");
+        }
+    }
+}
