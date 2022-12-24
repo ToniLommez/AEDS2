@@ -1,0 +1,24 @@
+• O que significa cada um dos trechos de código abaixo?
+
+int [ ] vet
+
+Aqui estamos declarando a criacao de um ponteiro para vet
+a sua sintaxe remete ao ponto em que isso sera um array
+
+-------------------
+
+= new int [5]
+
+Aqui declaramos que nosso array/ponteiro recebera
+5 espacos de memoria alocados para armazenar valores
+do tipo 'int'
+
+-------------------
+
+int [ ] vet = new int [5];
+
+Aqui pontamos nosso ponteiro para a memoria alocada
+assim poderemos trabalhar com esta variavel sendo
+ela um array, que e um ponteiro para um valor
+que se adicionarmos o proprio tamanho ao ponteiro
+chegaremos a posicao do proximo valor salvo e etc

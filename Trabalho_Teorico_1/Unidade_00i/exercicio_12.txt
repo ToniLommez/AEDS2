@@ -1,0 +1,45 @@
+• Seja a classe X abaixo e a Animal implementada e não mostrada, 
+avalie as afirmações listadas a seguir.
+-------------------------
+class X {
+    public static void main (String[] args){
+        Animal a = new Animal ("Cao", 32, 'a');
+        Animal b = new Animal ("Cao", 'x');
+        Animal c = b;
+        c.nome = "Gato";
+        System.out.println(b.nome);
+        c.setIdade(45);
+    } 
+}
+-------------------------
+I – Possivelmente, a Classe Animal tem tres
+    ou mais atributos. Alem disso, no construtor
+    com tres parametros, o atributo que recebe
+    o valor do primeiro parametro pode ser do tipo String e 
+    os que recebem os outros dois podem ser do tipo int.
+II - O comando System.out.println(b.nome) imprime a palavra "Gato".
+III - A classe Animal deve ter um atributo idade e esse sera obrigatoriamente privado.
+IV - Na classe animal o atributo nome tem que ser estatico.
+
+É correto apenas o que se afirma em: A) I e II. B) II e III. C) III e IV. D) I, II e III.
+-------------------------
+
+Como visto em new Animal ("Cao", 32, 'a');
+o construtor possui 3 parametros e o primeiro e do tipo string, os seguintes podem ser do tipo int
+pois um char e tratado como um byte enquanto nao e printado.
+Logo I e verdadeiro
+
+a classe gato possui o atributo nome que e publico como podemos ver em c.nome = "Gato";
+consequentemente ele pode ser printado.
+Logo II e verdadeiro
+
+nao existem indicios o suficiente para afirmar que idade e um valor obrigatoriamente privado
+porque este pode sim ser publico, o codigo reagiria de forma identica caso fosse
+Logo III e falso
+
+O atributo nome nao pode ser estatico porque ele foi alterado de valor em
+c.nome = "Gato";
+Logo IV e falso
+
+portanto a resposta correta e
+A) I e II.

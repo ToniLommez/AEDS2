@@ -1,0 +1,20 @@
+• Por que o código abaixo imprime 2, 1, 0, 0, 1 e 2?
+
+void printRecursivo() {
+    printRecursivo(2);
+}
+
+void printRecursivo(int i) {
+    System.out.println(i);
+    if (i > 0) {
+        printRecursivo(i - 1);
+    }
+    System.out.println(i);
+}
+
+----------------------------
+
+Uma das caracteristicas do metodo recursivo e' que se o print ocorrer
+apos a chamada recursiva ele ira retornar os valores em ordem inversa
+a chamada recursiva, dessa forma gerando este efeito apresentado
+no exemplo acima.

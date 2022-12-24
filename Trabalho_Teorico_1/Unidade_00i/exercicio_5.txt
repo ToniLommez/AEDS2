@@ -1,0 +1,24 @@
+• ... o que significa cada um dos trechos de código abaixo?
+
+Cliente c;
+
+Este codigo significa que estamos iniciando um ponteiro para objeto
+do tipo 'Cliente' e armazenando o seu ponteiro na variavel c;
+
+-------------------
+
+= new Cliente ();
+
+Aqui estamos chamando o construtor padrao do objeto "Cliente"
+que faz a sua inicializacao de acordo com os requisitos
+pre programados dentro do objeto
+
+-------------------
+
+Cliente c = new Cliente ();
+
+Aqui realizamos as 2 acoes ditas acima
+criamos um ponteiro chamado de 'c'
+e usamos o construtor padrao para inicializa-lo
+assim fazendo com que c armazene o ponteiro para o
+objeto do tipo Cliente criado

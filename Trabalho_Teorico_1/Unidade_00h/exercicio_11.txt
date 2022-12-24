@@ -1,0 +1,6 @@
+• Por que na prática é importante manter um nível “limitado” de chamadas
+recursivas?
+
+Porque um excesso de iteracoes recursivas ira levar a um
+erro de stack overflow, consumindo o limite da pilha de memoria
+do SO

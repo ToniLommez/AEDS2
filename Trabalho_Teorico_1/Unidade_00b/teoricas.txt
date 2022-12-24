@@ -1,0 +1,111 @@
+---------------------
+Marcos Antonio Lommez Candido Ribeiro
+771157
+13/08/2022
+---------------------
+
+• O que o codigo abaixo faz?
+
+boolean doidao (char c)
+O codigo mostrado transforma um caractere em inteiro
+em seguida compara se o caractere e' uma vogal
+a funcao retorna true se o caractere for uma vogal
+
+char toUpper (char c)
+o codigo recebe um caractere e atraves de calculo
+transforma o caractere minusculo em maiusculo
+
+boolean isVogal (char c)
+transforma um caractere em maiusculo
+e depois testa se ele esta entre as vogais
+
+boolean isLetra (char c)
+retorna true se um caractere esta entre A-Z ou a-z
+
+boolean isConsoante (char c)
+chama as funcoes anteriores e testa se e letra e nao e vogal
+
+---------------------
+
+• Um aluno desenvolveu o codigo abaixo, corrija-o:
+boolean isConsoante(String s, int n){
+
+/**
+ * Metodo recursivo que testa se a String inteira e consoante a partir de um index
+ * @param s String a ser testada
+ * @param i index a ser testado
+ * @return  True se toda a string for consoante
+ */
+public static boolean isConsoante(String s, int i) {
+    boolean resp = true;
+    if (i == s.length()) {
+        resp = true;
+    } else if (isConsoante(s.charAt(i)) == false) {
+        resp = false;
+    } else {
+        resp = isConsoante(s, i + 1);
+    }
+    return resp;
+}
+
+---------------------
+
+• Qual das duas versões é mais fácil de entender?
+
+A primeira versao (postada no exercicio acima)
+
+---------------------
+
+• Qual é a sua opinião sobre o código REAL abaixo?
+
+O codigo e de dificil compreensao e pouco auto explicativo
+nao e possivel dizer o que ele faz sem conhecimento previo
+
+---------------------
+
+• Qual é a diferença entre os dois métodos abaixo?
+
+quando possuimos i-- o valor decrementa apos a realizacao do codigo
+quando possuimo --i o valor decrementa antes da realizacao do codigo
+
+---------------------
+
+• O que o programa abaixo mostra na tela?
+
+o codigo faz um loop infinito que segue a sequencia comecando em 1
+mas em determinado momento os valores irao gerar overflow
+ao chegar no overflow, o mesmo ira passar para o seu extremo negativo
+e reiniciar a contagem, exemplo
+126 126 126 126
+127 127 127 127
+-128 128 128 128
+-127 129 129 129
+e importante lembrar que o limite negativo possui 1 unidade a mais do 
+que o positivo
+
+os respectivos valores limiares sao:
+byte  = 127
+short = 32.767
+int   = 2.147.483.647
+long  = 9.223.372.036.854.775.807
+
+---------------------
+
+• Por que o código abaixo imprime [46 - 11]?
+
+O codigo apresentado realiza a operacao chamada de bitshift
+esta operacao retira ou adiciona um bit do valor binario
+armazenado na maquina
+exemplo:
+a = 101
+a >> 1
+a = 10
+
+quando se faz um bit shift a direita o numero retira um digito
+logo e como se tivesse sido dividido por 2 sem adicionar o respectivos
+exemplo:
+a = 41 >> 1
+a = 20
+
+por isso 23 se torna 46 com bitshift a direita
+e consequentemente ao se retirar 1 digito se torna 11

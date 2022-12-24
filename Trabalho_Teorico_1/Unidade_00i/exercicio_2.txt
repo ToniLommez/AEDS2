@@ -1,0 +1,14 @@
+• Explique o que o programa abaixo imprime na tela
+-------------------------
+class Ponteiro01Array {
+    public static void main(String[] args) {
+        int[] vet = new int[5];
+        escrever(vet);
+        vet = new int[5];
+        escrever(vet);
+    }
+}
+-------------------------
+
+O programa acima printa inicialmente o endereco do array criado em vet
+em seguida printa o novo endereco do array criado em vet

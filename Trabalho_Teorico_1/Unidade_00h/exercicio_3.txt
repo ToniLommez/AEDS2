@@ -1,0 +1,23 @@
+• O que o programa iterativo abaixo mostra na tela?
+
+void primeiro(){
+    System.out.println(“1o – início”);
+    segundo();
+    System.out.println(“1o – fim”);
+    }
+
+void segundo(){
+    System.out.println(“2o – início e fim”);
+    }
+
+void main (){
+    System.out.println(“main – início”);
+    primeiro();
+    System.out.println(“main – fim”);
+}
+
+----------------------------
+
+O metodo acima simula o mesmo efeito do metodo recursivo mostrado na 
+questao anterior
+ela chama uma outra funcao para apos ela mostrar o fim da funcao principal

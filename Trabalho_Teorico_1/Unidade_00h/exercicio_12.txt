@@ -1,0 +1,9 @@
+• Qual é a sua opiniao sobre as implementações recursiva e iterativa do Fibonacci?
+
+Na minha opiniao ao primeiro momento e um pouco dificil de entender
+como o andar da sequencia acontece durante uma chamada recursiva
+ao contrario da iterativa que e mais facil de visualizar
+
+mas durante a implementacao e no passar da pratica
+o metodo iterativo pode acabar se fazendo mais facil e intuitivo
+de se planejar a implementacao.

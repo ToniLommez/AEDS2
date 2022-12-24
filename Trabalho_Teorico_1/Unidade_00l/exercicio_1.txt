@@ -1,0 +1,19 @@
+• Seja a classe Lixão abaixo e a Funcionário do exemplo
+anterior, faça o quadro de memória para o código abaixo
+
+class Lixao{
+    public static void main(String[] args){
+        Funcionario f1;
+        f1 = new Funcionario();
+        f1 = new Funcionario(5);
+    }
+}
+
+
+|------|
+| null | Funcionario f1;
+|------|
+|  0   | f1 = new Funcionario();
+|------|
+|  5   | f1 = new Funcionario(5);
+|------|
